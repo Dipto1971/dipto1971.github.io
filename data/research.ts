@@ -35,7 +35,7 @@ Research Contribution: Bridges gap between lightweight edge devices and cloud ML
     conference: "IEEE DCOSS-IoT 2026",
     paperNumber: "157",
     technologies: ["C99", "MQTT", "CoAP", "HTTP/QUIC", "Machine Learning", "Edge Computing", "Linux", "ESP32"],
-    image: "/projects/paumiiot.png",
+    image: "https://via.placeholder.com/400x300/1f2937/ffffff?text=PaumIoT",
     links: {
       repository: "https://github.com/rahmanmehraj182/PaumIoT",
       paper: "https://dcoss.org",

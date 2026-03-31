@@ -3,7 +3,7 @@ import Contacts from "@/components/Contacts";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Projects from "@/components/Projects";
-import Reviews from "@/components/Reviews";
+import Research from "@/components/Research";
 import Skills from "@/components/Skills";
 import WorkHistory from "@/components/WorkHistory";
 
@@ -16,6 +16,8 @@ export default function Home() {
           <Contacts />
           <About />
           <Skills />
+          <WorkHistory />
+          <Research />
           <Projects />
         </div>
       </main>
