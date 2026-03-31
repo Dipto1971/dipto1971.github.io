@@ -34,22 +34,15 @@ const WorkHistory = () => {
                 {work.date}
               </span>
             </div>
+            {work.description && (
+              <p className="text-zinc-700 dark:text-zinc-300 text-sm mt-2 leading-relaxed">
+                {work.description}
+              </p>
+            )}
             {work.skills && (
-              <div className="flex gap-2 flex-wrap my-2">
+              <div className="flex gap-2 flex-wrap my-3">
                 {work?.skills?.map((skill) => (
                   <SkillComponent key={skill.id} skill={skill} />
-                ))}
-              </div>
-            )}
-            {work && (
-              <div className="mt-2">
-                {work?.options?.map((option, key) => (
-                  <li
-                    key={key}
-                    className="text-zinc-900 text-base font-semibold dark:text-zinc-400"
-                  >
-                    {option}
-                  </li>
                 ))}
               </div>
             )}
