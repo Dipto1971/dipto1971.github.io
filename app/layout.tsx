@@ -1,10 +1,9 @@
 import "./globals.css";
 import Theme from "@/components/Theme";
-import DarkLight from "@/components/DarkLight";
 export const metadata = {
   title: "Mahir Faysal Haque Dipto",
   description:
-    "Expertise in C#, WPF, and WinForms, complemented by two years of hands-on experience in MERN stack development. Professional backend developer, specialized in designing secure and scalable systems. Currently, I'm working on WebRTC, focusing on real-time communication technologies for the web. I’m presently learning Go, Statistical Data Analysis. I’m looking to collaborate on WebRTC, NEXT.js projects. Ask me about WebRTC, MERN",
+    "Full Stack Engineer & DevOps with 4 years of experience building production-grade systems. Lead engineer at RN-JobForce. IEEE-published researcher (DCOSS-IoT 2026). Specialised in Next.js, TypeScript, Go, PostgreSQL, Redis, Docker, and AWS.",
 };
 
 export default function RootLayout({
@@ -16,7 +15,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Theme>
-          <DarkLight />
           {children}
         </Theme>
       </body>

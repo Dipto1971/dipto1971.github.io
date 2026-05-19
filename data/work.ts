@@ -17,15 +17,15 @@ interface skills {
 const data: work[] = [
   {
     id: 1,
-    image: "https://via.placeholder.com/400x300/1f2937/ffffff?text=RN-JobForce",
+    image: "/rnjopbforce-logo.jpeg",
     company: "RN-JobForce",
-    role: "Lead Full Stack Developer & System Designer",
+    role: "Lead Full Stack Engineer & System Designer",
     type: "Remote",
     date: "2024 - Present",
-    description: "Architected and built a production-grade enterprise recruitment platform from scratch. Designed multi-portal system (employer + jobseeker) with 20+ integrated services, real-time WebSocket communication, payment processing, and AI integrations. Managing technical architecture, system design, and full-stack implementation.",
+    description: "Designed and built a full enterprise recruitment platform from scratch, dual portals (employer + job seeker), real-time WebSocket messaging, Stripe subscriptions, AI interview tools, document signing, and Celery task queues. Deployed on Hetzner VPS with Nginx, Docker, and S3 for storage.",
     skills: [
-      { id: 1, name: "Django", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-line.svg" },
-      { id: 2, name: "Django REST", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-line.svg" },
+      { id: 1, name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+      { id: 2, name: "Nginx", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" },
       { id: 3, name: "Next.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
       { id: 4, name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
       { id: 5, name: "PostgreSQL", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
@@ -40,12 +40,12 @@ const data: work[] = [
   },
   {
     id: 2,
-    image: "https://via.placeholder.com/400x300/1f2937/ffffff?text=Pryntmart",
+    image: "/pryntmart-logo.png",
     company: "Pryntmart",
     role: "Full Stack Developer",
     type: "Remote",
     date: "2023 - 2024",
-    description: "Built a full-stack custom printing platform with Canva-like design editor. Implemented product configuration, design workflow, checkout integration, and admin panel. Deployed containerized stack on Hostinger VPS with Docker, Nginx, and SSL automation. Integrated Stripe for payments and Shippo for shipping.",
+    description: "Built a full-stack custom printing platform with a browser-based design editor (Fabric.js) for creating print-ready designs. Handled product configuration, cart and checkout flow, admin panel, and third-party integrations (Stripe, Shippo). Deployed on Hetzner VPS using Docker Compose, Nginx, and SSL.",
     skills: [
       { id: 1, name: "Next.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
       { id: 2, name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },

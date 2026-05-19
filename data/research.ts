@@ -18,24 +18,22 @@ const data: research[] = [
     id: 1,
     title: "PaumIoT: Protocol-Agnostic Universal Middleware for IoT",
     description:
-      "Cutting-edge IoT middleware system written in C99 that unifies multi-protocol device connectivity within a single network port. Implements intelligent protocol selection using reinforcement learning and machine learning techniques, enabling IoT deployments to dynamically adapt communication protocols based on real-time network conditions.",
-    details: `PaumIoT represents production-ready research code with enterprise-grade architecture featuring:
+      "An IoT middleware system written in C99 that lets devices on a single network port talk over MQTT, CoAP, HTTP, or QUIC — whichever protocol fits the conditions best. It picks the right protocol at runtime using a decision tree distilled from a cloud-trained neural network, so even constrained hardware can make smart choices without a cloud call.",
+    details: `PaumIoT is built around a few core ideas:
 
-Unified Protocol Gateway: Accepts MQTT, CoAP, HTTP, and QUIC protocols on a single port with byte-level packet inspection for protocol identification.
+Unified Protocol Gateway: One network port handles all four protocols. Byte-level packet inspection figures out which protocol each incoming packet uses, no config needed on the device side.
 
-Protocol-Agnostic Message Model: Internal message format with UUID identifier, ISO 8601 timestamps, binary payload, QoS levels, and cross-protocol compatibility.
+Protocol-Agnostic Message Model: Internally, all messages use the same format — UUID, ISO 8601 timestamp, binary payload, QoS level — regardless of which protocol delivered them.
 
-Intelligent Protocol Selection: Combines distilled decision tree from cloud-trained neural network with LinUCB contextual bandit for real-time adaptive protocol selection. Compact footprint of ~2KB with sub-100μs decision latency on edge devices.
+Edge Intelligence for Protocol Selection: A distilled decision tree (about 2KB) runs directly on the device and picks protocols using a LinUCB contextual bandit. Decision latency is under 100μs, making it practical on ESP32 and similar hardware.
 
-Priority-Aware Reliable Protocol: Novel PRIoTP implementation ensuring message delivery guarantees while optimizing for bandwidth and power constraints.
+PRIoTP (Priority-Aware Reliable IoT Protocol): A custom protocol built into the system that balances message delivery guarantees against bandwidth and power limits.
 
-Hardware Support: Tested on ESP32 and Linux-based edge devices with minimal memory requirements.
-
-Research Contribution: Bridges gap between lightweight edge devices and cloud ML systems through effective knowledge distillation for embedded systems.`,
+Hardware tested on ESP32 and Linux-based edge devices with a minimal memory footprint.`,
     conference: "IEEE DCOSS-IoT 2026",
     paperNumber: "157",
     technologies: ["C99", "MQTT", "CoAP", "HTTP/QUIC", "Machine Learning", "Edge Computing", "Linux", "ESP32"],
-    image: "https://via.placeholder.com/400x300/1f2937/ffffff?text=PaumIoT",
+    image: "/paumiot.png",
     links: {
       repository: "https://github.com/rahmanmehraj182/PaumIoT",
       paper: "https://dcoss.org",

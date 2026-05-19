@@ -1,14 +1,11 @@
 const data = {
-  heading: "Full Stack Developer & System Designer",
-  bio: `Full Stack Developer with expertise in architecting and building production-grade platforms at scale. 
-Specialized in designing secure, scalable enterprise systems with real-time features, payment processing, and AI integrations. 
-Proficient in Django, Next.js, TypeScript, React, and modern cloud infrastructure.
+  heading: "Full Stack Engineer & System Designer",
+  bio: `I'm a full stack engineer based in Dhaka with 4 years of experience building backend-heavy systems, with frontend and DevOps work alongside.
 
-Currently focused on building robust backend systems and crafting responsive user experiences. 
-Have successfully designed and implemented multi-portal architectures handling 20+ integrated services, 
-WebSocket-based real-time communication, Stripe payment systems, and AI-powered features.
+I've worked across the full stack from API design and database architecture to containerised deployments on Hetzner and AWS. My hands-on exposure covers real-time systems, payment integrations, task queues, document workflows, AI features, and production infrastructure with Docker, Nginx, and CI/CD pipelines.
 
-Experienced with PostgreSQL, Redis, Celery, AWS S3, and containerized deployments. 
-Passionate about clean code, production-ready systems, and solving complex engineering challenges.`,
+On the research side, I co-authored a paper on PaumIoT, an IoT middleware written in C99 that handles MQTT, CoAP, HTTP, and QUIC on a single port. The paper was accepted at IEEE DCOSS-IoT 2026.
+
+I work well across the stack and I'm comfortable taking a project from spec to production.`,
 };
 export default data;

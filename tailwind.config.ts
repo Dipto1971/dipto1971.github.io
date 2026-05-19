@@ -9,7 +9,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ["Nunito", "sans-serif"],
+      sans: ["Inter", "sans-serif"],
     },
     extend: {
       backgroundImage: {

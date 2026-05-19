@@ -9,6 +9,6 @@ const Theme = ({ children }) => {
   if (!state) {
     return null;
   }
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
+  return <ThemeProvider attribute="class" forcedTheme="dark">{children}</ThemeProvider>;
 };
 export default Theme;
