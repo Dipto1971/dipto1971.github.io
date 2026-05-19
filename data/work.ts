@@ -40,6 +40,21 @@ const data: work[] = [
   },
   {
     id: 2,
+    image: "/work/No-pic.png",
+    company: "Progress IT Solutions",
+    role: "Software Developer Lead",
+    type: "On-site",
+    date: "May 2024 - Present",
+    description: "Delivered client-specific desktop applications across two projects. Built a C# CLI tool for a studio company with 15 custom FFmpeg video shaders and OpenCV-based frame interpolation. Built a Windows application (C# WPF/WinForms) for a cybersecurity company, automating domain computer registration in Windows Event Viewer and simplifying GPO management across multiple domains.",
+    skills: [
+      { id: 1, name: "C#", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" },
+      { id: 2, name: "WPF", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" },
+      { id: 3, name: "OpenCV", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" },
+      { id: 4, name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+    ],
+  },
+  {
+    id: 3,
     image: "/pryntmart-logo.png",
     company: "Pryntmart",
     role: "Full Stack Developer",
