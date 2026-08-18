@@ -22,7 +22,7 @@ const experience: Role[] = [
     url: "https://rnjobforce.co.uk",
     role: "Lead Full Stack Engineer",
     type: "Remote",
-    period: "2024 - Present",
+    period: "2025 - Present",
     summary:
       "Technical lead for an AI-powered job search platform, responsible for the codebase, the production infrastructure, and the development team.",
     highlights: [
