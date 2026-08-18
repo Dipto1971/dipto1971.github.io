@@ -17,7 +17,7 @@ export default function EducationPage() {
         eyebrow="Education"
         title="Education and background"
       />
-      <div className="mt-12">
+      <div className="mt-8 sm:mt-12">
         <EducationList />
       </div>
     </>

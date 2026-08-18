@@ -1,6 +1,6 @@
 # dipto1971.github.io
 
-Personal portfolio of Mahir Faysal Haque Dipto - Lead Full Stack Engineer.
+Personal portfolio of Mahir Faysal Haque Dipto - Full Stack Engineer.
 Next.js 14 (App Router) + TypeScript + Tailwind CSS, statically exported and
 deployed to GitHub Pages by `.github/workflows/nextjs.yml`.
 

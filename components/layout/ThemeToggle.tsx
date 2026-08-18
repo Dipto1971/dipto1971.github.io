@@ -18,7 +18,7 @@ const ThemeToggle = () => {
       type="button"
       aria-label={mounted ? `Switch to ${isDark ? "light" : "dark"} theme` : "Switch theme"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="flex h-8 w-8 items-center justify-center rounded-md border border-line text-muted transition-colors hover:border-fg hover:text-fg"
+      className="flex h-10 w-10 items-center justify-center rounded-md border border-line text-muted transition-colors hover:border-fg hover:text-fg md:h-8 md:w-8"
     >
       {mounted && isDark ? (
         <Sun size={15} strokeWidth={1.75} />

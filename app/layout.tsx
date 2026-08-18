@@ -22,17 +22,17 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
   title: {
-    default: `${profile.name} - Lead Full Stack Engineer`,
+    default: `${profile.name} - ${profile.title}`,
     template: `%s - ${profile.name}`,
   },
   description:
-    "Lead Full Stack Engineer at RN Jobforce. I design backend systems with Django and Python, build Next.js frontends, and run the cloud infrastructure on Terraform, AWS EC2, and NGINX.",
+    "Full Stack Engineer based in Dhaka. I design backend systems with Django and Python, build Next.js frontends, and run the cloud infrastructure on Terraform, AWS EC2, and NGINX.",
   applicationName: `${profile.name} - Portfolio`,
   authors: [{ name: profile.name, url: profile.siteUrl }],
   creator: profile.name,
   keywords: [
     "Mahir Faysal Haque Dipto",
-    "Lead Full Stack Engineer",
+    "Full Stack Engineer",
     "System architecture",
     "Django",
     "Next.js",
@@ -45,24 +45,24 @@ export const metadata: Metadata = {
     type: "profile",
     siteName: profile.name,
     url: profile.siteUrl,
-    title: `${profile.name} - Lead Full Stack Engineer`,
+    title: `${profile.name} - ${profile.title}`,
     description:
-      "Lead Full Stack Engineer at RN Jobforce, working on backend system design, Next.js frontends, and cloud infrastructure.",
+      "Full Stack Engineer working on backend system design, Next.js frontends, and cloud infrastructure.",
     locale: "en_US",
     images: [
       {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: `${profile.name} - Lead Full Stack Engineer`,
+        alt: `${profile.name} - ${profile.title}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} - Lead Full Stack Engineer`,
+    title: `${profile.name} - ${profile.title}`,
     description:
-      "Lead Full Stack Engineer at RN Jobforce, working on backend system design, Next.js frontends, and cloud infrastructure.",
+      "Full Stack Engineer working on backend system design, Next.js frontends, and cloud infrastructure.",
     images: ["/og.jpg"],
   },
   robots: {
@@ -73,6 +73,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  // Lets the layout paint under notches while the safe-area padding keeps
+  // content clear of them.
+  viewportFit: "cover",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#09090b" },
@@ -124,16 +129,19 @@ export default function RootLayout({
       className={`${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen font-sans">
+      <body className="min-h-[100dvh] overflow-x-clip font-sans">
         <ThemeProvider>
           <a
             href="#main"
-            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-fg focus:px-3 focus:py-2 focus:text-sm focus:text-bg"
+            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-fg focus:px-3 focus:py-2 focus:text-sm focus:text-bg"
           >
             Skip to content
           </a>
           <SiteHeader />
-          <main id="main" className="mx-auto w-full max-w-wide px-5 py-14 sm:px-8">
+          <main
+            id="main"
+            className="gutter mx-auto w-full max-w-wide py-10 sm:py-14"
+          >
             {children}
           </main>
           <SiteFooter />

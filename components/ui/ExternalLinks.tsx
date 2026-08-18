@@ -10,14 +10,14 @@ const ExternalLinks = ({ links }: { links: LinkItem[] }) => {
   if (!links.length) return null;
 
   return (
-    <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+    <div className="-mb-1 flex flex-wrap items-center gap-x-5 gap-y-1">
       {links.map((link) => (
         <Link
           key={link.label + link.href}
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-sm text-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
+          className="inline-flex min-h-[36px] items-center gap-1 text-sm text-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
         >
           {link.label}
           <ArrowUpRight size={13} strokeWidth={1.75} />

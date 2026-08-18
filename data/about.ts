@@ -1,6 +1,6 @@
 const about = {
   heading: "About",
-  lead: "I am a Lead Full Stack Engineer with a strong foundation in system design and scalable web architectures.",
+  lead: "I am a Full Stack Engineer with a strong foundation in system design and scalable web architectures.",
   paragraphs: [
     "My technical journey began with competitive programming in C and C++ during my university studies. I subsequently transitioned into advanced web development. I learned modern stacks and complex communication protocols like WebRTC.",
     "I began my professional career at Progress IT Solutions. I engineered C# and .NET applications for enterprise clients. My primary achievement was delivering a Windows event integration collector for an Australian cybersecurity firm. I built this tool to securely parse and route critical system logs. Additionally, I developed a high-performance video processing console application. This software utilized FFmpeg and OpenCvSharp to execute complex batch media edits. These initial projects established my ability to deliver secure and resource-efficient software under strict requirements.",

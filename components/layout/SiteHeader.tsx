@@ -17,31 +17,33 @@ const SiteHeader = () => {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur-md">
-      <div className="mx-auto w-full max-w-wide px-5 sm:px-8">
-        <div className="flex flex-col gap-3 py-4 md:flex-row md:items-center md:justify-between md:gap-8">
-          <div className="flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-md supports-[backdrop-filter]:bg-bg/75">
+      <div className="gutter mx-auto w-full max-w-wide">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-8 md:py-4">
+          {/* Row one on phones: identity and theme control stay on screen while
+              the tab strip below is free to scroll sideways. */}
+          <div className="flex min-w-0 items-center justify-between gap-3 py-3 md:py-0">
             <Link
               href="/"
-              className="text-sm font-semibold tracking-tight text-fg transition-colors hover:text-accent"
+              className="truncate text-sm font-semibold tracking-tight text-fg transition-colors hover:text-accent"
             >
               {profile.name}
             </Link>
-            <div className="md:hidden">
+            <div className="shrink-0 md:hidden">
               <ThemeToggle />
             </div>
           </div>
 
-          <div className="flex items-center gap-6">
-            <nav aria-label="Primary">
-              <ul className="no-scrollbar -mx-1 flex items-center gap-1 overflow-x-auto text-sm">
+          <div className="flex min-w-0 items-center gap-6">
+            <nav aria-label="Primary" className="min-w-0 flex-1">
+              <ul className="no-scrollbar scroll-fade-x -mx-1 flex items-center gap-0.5 overflow-x-auto pb-1 text-sm md:pb-0">
                 {navItems.map((item) => (
-                  <li key={item.href}>
+                  <li key={item.href} className="shrink-0">
                     <Link
                       href={item.href}
                       aria-current={isActive(item.href) ? "page" : undefined}
                       className={classNames(
-                        "block whitespace-nowrap rounded-md px-2 py-1 transition-colors",
+                        "flex min-h-[44px] items-center whitespace-nowrap rounded-md px-3 transition-colors md:min-h-0 md:px-2 md:py-1",
                         isActive(item.href)
                           ? "text-fg"
                           : "text-muted hover:text-fg"
@@ -62,7 +64,7 @@ const SiteHeader = () => {
                 ))}
               </ul>
             </nav>
-            <div className="hidden md:block">
+            <div className="hidden shrink-0 md:block">
               <ThemeToggle />
             </div>
           </div>

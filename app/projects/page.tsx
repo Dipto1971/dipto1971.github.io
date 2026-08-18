@@ -17,7 +17,7 @@ export default function ProjectsPage() {
         eyebrow="Projects"
         title="Selected projects"
       />
-      <div className="mt-12">
+      <div className="mt-8 sm:mt-12">
         <ProjectList />
       </div>
     </>

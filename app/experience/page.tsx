@@ -17,7 +17,7 @@ export default function ExperiencePage() {
         eyebrow="Experience"
         title="Professional experience"
       />
-      <div className="mt-12">
+      <div className="mt-8 sm:mt-12">
         <ExperienceList />
       </div>
     </>

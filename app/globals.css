@@ -26,12 +26,17 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    /* Clears the sticky header when jumping to an in-page anchor */
+    scroll-padding-top: 5.5rem;
   }
 
   body {
     @apply bg-bg text-fg antialiased;
     font-feature-settings: "cv11", "ss01";
     text-rendering: optimizeLegibility;
+    /* Long URLs and identifiers must not push the page wider than the screen */
+    overflow-wrap: break-word;
+    -webkit-tap-highlight-color: transparent;
   }
 
   ::selection {
@@ -44,6 +49,52 @@
 }
 
 @layer components {
+  /* Page gutter: 1rem on phones, wider from sm up, and never under a notch
+     when the device is held in landscape. */
+  .gutter {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  @media (min-width: 640px) {
+    .gutter {
+      padding-left: max(1.5rem, env(safe-area-inset-left));
+      padding-right: max(1.5rem, env(safe-area-inset-right));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .gutter {
+      padding-left: max(2rem, env(safe-area-inset-left));
+      padding-right: max(2rem, env(safe-area-inset-right));
+    }
+  }
+
+  /* Signals that the tab strip keeps going past the edge of a narrow screen */
+  .scroll-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 14px,
+      #000 calc(100% - 14px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 14px,
+      #000 calc(100% - 14px),
+      transparent 100%
+    );
+  }
+
+  @media (min-width: 768px) {
+    .scroll-fade-x {
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+
   /* Horizontal tab strip on small screens scrolls without a visible bar */
   .no-scrollbar {
     scrollbar-width: none;

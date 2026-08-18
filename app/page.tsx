@@ -6,9 +6,9 @@ import Section from "@/components/ui/Section";
 import about from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Mahir Faysal Haque Dipto - Lead Full Stack Engineer",
+  title: "Mahir Faysal Haque Dipto - Full Stack Engineer",
   description:
-    "Lead Full Stack Engineer at RN Jobforce. Backend system design with Django and Python, Next.js frontends, and cloud infrastructure on Terraform, AWS EC2, and NGINX.",
+    "Full Stack Engineer based in Dhaka. Backend system design with Django and Python, Next.js frontends, and cloud infrastructure on Terraform, AWS EC2, and NGINX.",
   alternates: { canonical: "/" },
 };
 
@@ -23,11 +23,13 @@ export default function HomePage() {
 
       <Section title="About">
         <div className="max-w-content space-y-5">
-          <p className="text-base leading-relaxed text-fg">{about.lead}</p>
+          <p className="text-[0.9375rem] leading-relaxed text-fg sm:text-base">
+            {about.lead}
+          </p>
           {about.paragraphs.map((paragraph) => (
             <p
               key={paragraph.slice(0, 40)}
-              className="text-base leading-relaxed text-muted"
+              className="text-[0.9375rem] leading-relaxed text-muted sm:text-base"
             >
               {paragraph}
             </p>

@@ -17,7 +17,7 @@ export default function ResearchPage() {
         eyebrow="Research"
         title="Research and publications"
       />
-      <div className="mt-12">
+      <div className="mt-8 sm:mt-12">
         <ResearchList />
       </div>
     </>
