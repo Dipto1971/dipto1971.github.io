@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# dipto1971.github.io
 
-## Getting Started
+Personal portfolio of Mahir Faysal Haque Dipto - Lead Full Stack Engineer.
+Next.js 14 (App Router) + TypeScript + Tailwind CSS, statically exported and
+deployed to GitHub Pages by `.github/workflows/nextjs.yml`.
 
-First, run the development server:
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # static export into ./out
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+  layout.tsx        Root layout: fonts, metadata, JSON-LD, header/footer shell
+  template.tsx      Per-route fade transition (client-side tab switching)
+  page.tsx          Overview: hero, facts, about, skills
+  experience/       Professional experience
+  projects/         Selected projects
+  research/         Publications
+  education/        Education and background
+  sitemap.ts        /sitemap.xml
+  robots.ts         /robots.txt
+components/
+  layout/           Site header (tabs), footer, theme provider/toggle, transition
+  sections/         Data-driven content blocks
+  ui/               Page header, section, tag list, link list primitives
+data/                Content source of truth (profile, about, experience, ...)
+lib/nav.ts           Tab definitions, shared by the header and sitemap
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Content lives in `data/` - edit those files to update the site; components take
+no hard-coded copy.
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `next.config.js` sets `output: "export"` and `trailingSlash: true`; the Pages
+  workflow uploads `./out`.
+- Images are unoptimized because the static export has no image server.
+- Theme is light/dark via `next-themes` with a `class` strategy; colours are CSS
+  variables in `app/globals.css` exposed as Tailwind tokens.
