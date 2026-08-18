@@ -14,7 +14,7 @@ const profile = {
   currentCompany: "RN Jobforce",
   email: "dipto.haq771@gmail.com",
   summary:
-    "I currently serve as the Lead Full Stack Engineer at RN Jobforce driving the technical development of the job search platform. My core expertise centers on designing scalable web architectures and establishing secure cloud deployment pipelines. I specialize in backend system design, modern full-stack frameworks, and DevOps engineering.",
+    "I currently serve as the Lead Full Stack Engineer at RN Jobforce. My core expertise centers on designing scalable web architectures and establishing secure cloud deployment pipelines. I specialize in backend system design, modern full-stack frameworks, and DevOps engineering.",
   facts: [
     { label: "Role", value: "Lead Full Stack Engineer, RN Jobforce" },
     { label: "Focus", value: "System architecture, backend, DevOps" },
