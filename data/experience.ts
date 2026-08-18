@@ -71,7 +71,7 @@ const experience: Role[] = [
     company: "Progress IT Solutions",
     role: "Software Engineer",
     type: "On-site",
-    period: "May 2024 - Present",
+    period: "May 2024 - August 2024",
     summary:
       "Built C# and .NET desktop applications for enterprise clients, including an Australian cybersecurity firm.",
     highlights: [
